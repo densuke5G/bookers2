@@ -1,2 +1,30 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+<% if @book.errors.any? %>
+  <ul class="alert alert-danger" role="alert">
+    <h6 class="alert-heading">
+      <%= @book.errors.count %> error occurred!
+    </h6>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Editing Book</h2>
+      <%= form_with model: @book do |f| %>
+        <label for="InputTitle">Title</label>
+        <%= f.text_field :title, autofocus: true, id:"InputTitle" %>
+
+         <label for="InputOpinion">Opinion</label>
+        <%= f.text_area :body, autofocus: true, id:"InputOpinion" %>
+
+        <%= f.submit "Update Book" %>
+      <% end %>
+      <%= link_to "Show", book_path(@book.id) %>
+      |
+      <%= link_to "Back", books_path %>
+    </div>
+  </div>
+</div>
