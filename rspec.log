@@ -281,8 +281,3 @@ Userモデルのテスト
 [32m      ユーザ一覧画面でレンチアイコンが表示される[0m
 [32m      ユーザ詳細画面でレンチアイコンが表示される[0m
 [32m      投稿一覧画面でレンチアイコンが表示される[0m
-[32m      投稿詳細画面でレンチアイコンが表示される[0m
-
-Finished in 1 minute 3.13 seconds (files took 3.58 seconds to load)
-[32m199 examples, 0 failures[0m
-

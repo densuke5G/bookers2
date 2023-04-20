@@ -16,7 +16,7 @@
       <%= form_with model: @user do |f| %>
         <div class="form-group">
           <label for="InputName">Name</label><br>
-          <%= f.text_field :name, autofocus: true, id:"InputName", class: "form-controll" %>
+          <%= f.text_field :name, autofocus: true, id:"InputName", style: "width:100%" %>
         </div>
         <div class="form-group">
           <label for="InputImage">Image</label><br>
@@ -24,7 +24,7 @@
         </div>
         <div class="form-group">
           <label for="InputIntroduction">Introduction</label><br>
-          <%= f.text_area :introduction, autofocus: true, id:"InputIntroduction" %>
+          <%= f.text_area :introduction, autofocus: true, id:"InputIntroduction", style: "width:100%" %>
         </div>
 
         <%= f.submit "Update User", class: "btn btn-secondary" %>
