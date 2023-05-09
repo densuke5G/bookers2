@@ -12,8 +12,9 @@ Rails.application.routes.draw do
     get 'follows' => 'relationships#follows', as: 'follows'
     get 'followers' => 'relationships#followers', as: 'followers'
   end
-
-
+  
+  get 'search' => 'searches#search'
+  
   root to: 'homes#top'
   get 'home/about' => 'homes#about', as: 'about'
 
